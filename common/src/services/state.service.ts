@@ -333,6 +333,8 @@ export class StateService<
   }
 
   async getCanAccessPremium(options?: StorageOptions): Promise<boolean> {
+    return true;
+
     if (!(await this.getIsAuthenticated(options))) {
       return false;
     }
